@@ -1,10 +1,7 @@
 # zip-pass-bruteforce-python
- _____ _                 ____                     _                        _____                _ 
-|__  /(_) _ __          / ___|  __ _  _ __   ___ | | __  ___  _ __        |_   _|  ___    ___  | |
-  / / | || '_ \  _____ | |     / _` || '__| / __|| |/ / / _ \| '__| _____   | |   / _ \  / _ \ | |
- / /_ | || |_) ||_____|| |___ | (_| || |   | (__ |   < |  __/| |   |_____|  | |  | (_) || (_) || |
-/____||_|| .__/         \____| \__,_||_|    \___||_|\_\ \___||_|            |_|   \___/  \___/ |_|
-         |_|
+![image](https://github.com/lmcteam206/zip-pass-bruteforce-python/assets/140020887/6c38de03-ebe0-4ff3-9784-fbea2733c4ee)
+
+
          
 - use main.py to brute force a zip file
 - out folder is the out put folder
