@@ -1,11 +1,28 @@
-from colorama import Fore
 import os
+from art import *
 import subprocess
+import time
+import itertools
+import random
+import string
+from colorama import Fore
 
+
+print(Fore.RED)
+tprint('Zip-Carcker-Tool')
+print(Fore.BLUE)
+print('''[+]- by Lmcteam206
+[+]- this tool is for eductional propuses only
+[+]- this tool is still demo''')
+print(Fore.LIGHTRED_EX)
+print('These are all the files in this folder now >>>')
+print(Fore.GREEN )
+print(os.system('dir'))
+print(Fore.RESET)
 #################################################################################################################################- zip extract section-
 def extract_zip_with_password(zip_file, output_dir, password):
-    # Full path to 7z.exe
-    seven_zip_path = "C:\\Program Files\\7-Zip\\7z.exe"  # Modify this with the correct path
+    # Modify this with the correct path to 7z.exe
+    seven_zip_path = "C:\\Program Files\\7-Zip\\7z.exe"
     
     # Check if 7z.exe exists at the specified path
     if not os.path.exists(seven_zip_path):
@@ -52,13 +69,17 @@ def attempt(at_num, word):
         input('Enter ....')
         exit()
 
-with open('passwords.txt', 'r') as file:
-    x = 0
-    for line in file:
-        x += 1
-        LL = line.strip()
-        attempt(x, LL)
+# Generate passwords dynamically
+def generate_passwords(length=6, characters=string.ascii_letters + string.digits):
+    for password in itertools.product(characters, repeat=length):
+        yield ''.join(password)
+
+# Adjust the password length as needed
+password_length = 6
+
+x = 0
+for password in generate_passwords(password_length):
+    x += 1
+    attempt(x, password)
 
 print("Password not found.")
-
-#################################################################################################################################
